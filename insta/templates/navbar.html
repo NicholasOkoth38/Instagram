@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    .glyph {
+      color: black;
+      font-size: 20px;
+
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse" style="background-color: white; color: black; border: 0.5px solid lightgray;
+  padding-bottom: 0px; margin: 0;">
+    <div class="container">
+
+      <div class="col-md-2 navbar-header" style="padding-left: 100px; padding-top: 10px;">
+        <a href="{% url 'index' %}"
+          style="font-family: 'Satisfy', cursive; font-size: 2em; text-decoration: none; color: black;">Instagram</a>
+      </div>
+
+
+
+      <div class="col-sm-6 col-md-3 navbar-right " style="padding-right: 100px; padding-top: 10px;">
+        {% if user.is_authenticated %}
+        <a href="{%url 'post_image'%}">
+          <img src="https://img.icons8.com/ios/24/000000/add-image.png" />
+        </a>
+        <a href="/"><img src="https://img.icons8.com/material-rounded/24/000000/home.png" /></a>       
+        <a href="/profile"><img src="https://img.icons8.com/material-outlined/24/000000/user--v1.png"/></a>
+        <a class="glyphicon glyphicon-log-out glyph" href="/logout">Logout</a>
+        {% else %}
+        <a class="glyphicon glyphicon-log-in glyph" href="/accounts/login">Login</a>
+        <a class='btn btn-default' href="/accounts/register">Register</a>
+        {% endif %}
+      </div>
+
+      <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-6" style="padding-left: 200px; ">
+
+        <form class="navbar-form" role="search" action="{%url 'search'%}">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="search user " name="insta"
+              style="background-color: #f8f9fa;">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <!-- search form end -->
+
+    </div>
+
+
+  </nav>
+</body>
+
+</html>

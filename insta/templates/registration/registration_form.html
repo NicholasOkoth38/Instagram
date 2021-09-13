@@ -1,0 +1,43 @@
+{%extends "registration/base.html"%} 
+{% load bootstrap3 %}
+{% block content %}
+<div class="container">
+  <div class="row">
+ 
+    <div class="col-md-6">
+      
+      <img src="https://edge.alluremedia.com.au/uploads/businessinsider/2020/11/1.-IG-Home.jpg" style="height: 100vh; padding-left: 100px;">
+    </div>
+    <div class="col-md-4" style="padding-left: 20px;">
+      {% if form.errors %}
+        <p> Some Information Might be Incorrect </p>
+      {% endif %}
+      <div class="panel panel-default">
+
+        <div class="panel-heading">
+          <h3 class="text-center">Instagram Sign Up</h3>
+        </div>
+        <div class="panel-body">
+
+          <form  action="/accounts/register/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+            </div>
+            <p>Already have an account? <a href="/login"> Log In</a></p>
+            <input type="hidden" name="next" value="{{next}}">
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- empty div -->
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock %}
