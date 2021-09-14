@@ -42,3 +42,4 @@ class TestImage(TestCase):
         Image.objects.all().delete()
         Profile.objects.all().delete()
         User.objects.all().delete()
+

@@ -67,3 +67,4 @@ class Comment(models.Model):
 
     def delete_comment(self):
         self.delete()       
+        
