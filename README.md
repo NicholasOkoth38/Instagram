@@ -39,7 +39,7 @@ Run the following command on the terminal:
      python3 manage.py test insta
 
 ### Admin Dashboard
-    (https://myinstaposts.herokuapp.com/admin)
+    (https:)
     username: moringa
     password: Access 
 
