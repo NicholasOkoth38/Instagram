@@ -45,7 +45,7 @@ Run the following command on the terminal:
 
 ### Search functionality
     search by username
-    
+
 ## Technologies used
     Python 3.8
     Bootstrap
@@ -56,5 +56,4 @@ Run the following command on the terminal:
 [View Live Site.]()
 
 ## License
-
 This project is under the [MIT](LICENSE) license.
