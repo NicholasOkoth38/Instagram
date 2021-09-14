@@ -19,7 +19,6 @@ Instagram is an application where a user can register for an account then share 
 Run the following command on the terminal:
 `git clone `
 
-
 ###  Project Setup
 1. Create virtual environment (python3 -m venv virtual)
 2. Activate virtual environment (. virtual/bin/activate)
@@ -50,6 +49,7 @@ Run the following command on the terminal:
     Python 3.8
     Bootstrap
     Django
+
 ## Live Sute
 [View Live Site.]()
 
