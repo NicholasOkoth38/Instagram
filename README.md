@@ -45,6 +45,7 @@ Run the following command on the terminal:
 
 ### Search functionality
     search by username
+    
 ## Technologies used
     Python 3.8
     Bootstrap
