@@ -51,7 +51,6 @@ Run the following command on the terminal:
     Bootstrap
     Django
 ## Live Sute
-
 [View Live Site.]()
 
 ## License
