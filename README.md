@@ -39,8 +39,8 @@ Run the following command on the terminal:
 
 ### Admin Dashboard
     (https:)
-    username: moringa
-    password: Access 
+    username: 
+    password:  
 
 ### Search functionality
     search by username
