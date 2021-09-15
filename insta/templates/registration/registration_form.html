@@ -1,16 +1,17 @@
-{%extends "registration/base.html"%} 
+{%extends "registration/base.html"%}
 {% load bootstrap3 %}
 {% block content %}
 <div class="container">
   <div class="row">
- 
+
     <div class="col-md-6">
-      
-      <img src="https://edge.alluremedia.com.au/uploads/businessinsider/2020/11/1.-IG-Home.jpg" style="height: 100vh; padding-left: 100px;">
+
+      <img src="https://nonprofitutopia.com/wp-content/uploads/2020/10/Instagram-Post-Icon-OuQwrG.jpeg"
+        style="height: 100vh; padding-left: 100px;">
     </div>
     <div class="col-md-4" style="padding-left: 20px;">
       {% if form.errors %}
-        <p> Some Information Might be Incorrect </p>
+      <p> Some Information Might be Incorrect </p>
       {% endif %}
       <div class="panel panel-default">
 
@@ -19,7 +20,7 @@
         </div>
         <div class="panel-body">
 
-          <form  action="/accounts/register/" method="post">
+          <form action="/accounts/register/" method="post">
             {% csrf_token %}
             {% bootstrap_form form %}
             <div class="form-group">

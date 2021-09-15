@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import django_heroku
 import dj_database_url
-from decouple import config,Csv
+from decouple import config, Csv
 
 
 import cloudinary
@@ -21,36 +21,36 @@ import cloudinary.uploader
 import cloudinary.api
 
 cloudinary.config(
-  cloud_name = "jos254",
-  api_key = "888584575498376",
-  api_secret = "jS8SX99ro6Cecs2oUxLshigg5ug",
-  secure = True
+    cloud_name="dephxwpkn",
+    api_key="299887178964631",
+    api_secret="b5F59tCE-wJkgvVZtbF3hldHHXE",
+    secure=True
 )
 
 
-MODE=config("MODE", default="dev")
+MODE = config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
-if config('MODE')=="dev":
-   DATABASES = {
-       'default': {
-           'ENGINE': 'django.db.backends.postgresql_psycopg2',
-           'NAME': config('DB_NAME'),
-           'USER': config('DB_USER'),
-           'PASSWORD': config('DB_PASSWORD'),
-           'HOST': config('DB_HOST'),
-           'PORT': '',
-       }
-       
-   }
+if config('MODE') == "dev":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'HOST': config('DB_HOST'),
+            'PORT': '',
+        }
+
+    }
 # production
 else:
-   DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
-   }
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config('DATABASE_URL')
+        )
+    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
@@ -62,7 +62,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -172,7 +171,7 @@ STATICFILES_DIRS = (
 #  profile authentication error fixer
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 
-#auto field yellow error
+# auto field yellow error
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # configuring the location for media
